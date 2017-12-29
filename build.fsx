@@ -1,13 +1,9 @@
-#r "packages/FAKE/tools/FakeLib.dll"
-#r "System.Net.Http.dll"
-
-#I @".\packages\Microsoft.Azure.Management.ResourceManager.Fluent\lib\net452"
-#r "Microsoft.Azure.Management.ResourceManager.Fluent.dll"
-
-#I @".\packages\Newtonsoft.Json\lib\net45"
-#r "Newtonsoft.Json.dll"
-
-#load @".\paket-files\CompositionalIT\fshelpers\src\FsHelpers\ArmHelper\ArmHelper.fs"
+#I @"packages"
+#I @"packages/Newtonsoft.Json/lib/net45"
+#I @"packages/Microsoft.Rest.ClientRuntime.Azure/lib/net452"
+#r @"packages/FAKE/tools/FakeLib.dll"
+#load @".paket/load/net452/main.group.fsx"
+#load @"paket-files/CompositionalIT/fshelpers/src/fshelpers/armhelper/ArmHelper.fs"
 
 open Cit.Helpers.Arm
 open Fake
